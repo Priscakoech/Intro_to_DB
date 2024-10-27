@@ -1,7 +1,8 @@
 import mysql.connector
 from mysql.connector import Error
 
-def create_database(database_name):
+def create_database():
+    database_name = "alx_book_store"
     try:
         connection = mysql.connector.connect(
             host="localhost",
@@ -21,4 +22,4 @@ def create_database(database_name):
             connection.close()
             
 if __name__ == "__main__":
-    create_database("alx_book_store")
+    create_database()
